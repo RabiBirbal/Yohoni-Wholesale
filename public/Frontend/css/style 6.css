@@ -1,0 +1,446 @@
+   
+/*navbar*/
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+body{font-family: 'Roboto', sans-serif;}
+/*
+1.1 Header Area
+***************************************************/
+/*Bootstrap Reset*/
+.navbar-nav > li > a {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.mainmenu {
+    background-color: transparent;
+    border-color: transparent;
+    margin-bottom: 0;
+    border: 0px !important;
+}
+.navbar-nav > li:last-child > a {
+    padding-right: 0px;
+    margin-right: 0px;
+}
+.dropdown-menu {
+    padding: 0px 0; 
+    margin: 0 0 0; 
+    border: 0px solid transition !important;
+    border: 0px solid rgba(0,0,0,.15);  
+    border-radius: 0px;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+
+}
+/*=-====Main Menu=====*/
+.navbar-nav .open .dropdown-menu > li > a {
+    padding: 16px 15px 16px 25px;
+}
+.header_bottom { background: #b5092e }
+.header_area .header_bottom .mainmenu a , .navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 16px 15px;
+    font-family: 'Roboto', sans-serif;
+}
+.header_area .mainmenu .active a,
+.header_area .mainmenu .active a:focus,
+.header_area .mainmenu .active a:hover,
+.header_area .mainmenu li a:hover,
+.header_area .mainmenu li a:focus ,
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+    color: #000;
+  /*  background: #fff;*/
+    outline: 0;
+}
+/*-----./ Main Menu-----*/
+
+/*.navbar-default .navbar-toggle { border-color: #fff }*/ /*Toggle Button*/
+.navbar-default .navbar-toggle .icon-bar { background-color: #fff } /*Toggle Button*/
+
+/*==========Sub Menu=v==========*/
+/*.mainmenu .collapse ul > li:hover > a{background: #fff;}*/
+.mainmenu .collapse ul ul > li:hover > a, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover{background: ;}
+.mainmenu .collapse ul ul ul > li:hover > a{background: #000;}
+
+.mainmenu .collapse ul ul, .mainmenu .collapse ul ul.dropdown-menu{background:#089cb7}
+.mainmenu .collapse ul ul ul, .mainmenu .collapse ul ul ul.dropdown-menu{background:#fff}
+.mainmenu .collapse ul ul ul ul, .mainmenu .collapse ul ul ul ul.dropdown-menu{background:#fff}
+
+/******************************Drop-down menu work on hover**********************************/
+.mainmenu{background: none;border: 0 solid;margin: 0;padding: 0;min-height:20px}
+@media only screen and (min-width: 767px) {
+.mainmenu .collapse ul li{position:relative;}
+.mainmenu .collapse ul li:hover> ul{display:block}
+.mainmenu .collapse ul ul{position:absolute;top:100%;left:0;min-width:250px;display:none}
+/*******/
+.mainmenu .collapse ul ul li{position:relative}
+.mainmenu .collapse ul ul li:hover> ul{display:block}
+.mainmenu .collapse ul ul ul{position:absolute;top:0;left:100%;min-width:250px;display:none}
+/*******/
+.mainmenu .collapse ul ul ul li{position:relative}
+.mainmenu .collapse ul ul ul li:hover ul{display:block}
+.mainmenu .collapse ul ul ul ul{position:absolute;top:0;left:-100%;min-width:250px;display:none;z-index:1}
+
+}
+
+/*navbar ends*/
+
+.about h1{
+	color: #2cabc1;
+}
+.about p{
+	text-align: justify;
+}
+/*icon product*/
+.icon img{
+    margin-top: 50px;
+    width: 30%;
+    height:30%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.icon{
+  margin-top: 20px;
+}
+
+.icon  center{
+     display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.icon p{
+     text-align: center;
+    color: black;
+    font-family: arial;
+    font-size: 15px;
+}
+/*icon product ends*/
+
+
+
+/*choose brand*/
+.brand{
+  margin-top: 50px;
+}
+.brand h1{
+ text-align: center;
+    font-family: vedena;
+   margin-top: 50px;
+   color: #000;
+}
+/*choose brand ends*/
+
+
+
+
+.owl-carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
+  z-index: 1; }
+
+.owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+  touch-action: manipulation;
+  -moz-backface-visibility: hidden;
+  /* fix firefox animation glitch */ }
+
+.owl-carousel .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  /* fix for flashing background */
+  -webkit-transform: translate3d(0px, 0px, 0px); }
+
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0); }
+
+.owl-carousel .owl-item {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none; }
+
+  
+/*.owl-carousel .owl-item img {
+  display: block;
+  width: 100%;
+  opacity: 0.6; }
+  .owl-carousel .owl-item img:hover {
+    opacity: 1; }*/
+
+.owl-carousel .owl-nav.disabled,
+.owl-carousel .owl-dots.disabled {
+  display: none; }
+
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next,
+.owl-carousel .owl-dot {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel button.owl-dot {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0 !important;
+  font: inherit; }
+
+.owl-carousel.owl-loaded {
+  display: block; }
+
+.owl-carousel.owl-loading {
+  opacity: 0;
+  display: block; }
+
+.owl-carousel.owl-hidden {
+  opacity: 0; }
+
+.owl-carousel.owl-refresh .owl-item {
+  visibility: hidden; }
+
+.owl-carousel.owl-drag .owl-item {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.owl-carousel.owl-grab {
+  cursor: move;
+  cursor: grab; }
+
+.owl-carousel.owl-rtl {
+  direction: rtl; }
+
+.owl-carousel.owl-rtl .owl-item {
+  float: right; }
+
+/* No Js */
+.no-js .owl-carousel {
+  display: block; }
+
+/*
+ *  Owl Carousel - Animate Plugin
+ */
+.owl-carousel .animated {
+  animation-duration: 1000ms;
+  animation-fill-mode: both; }
+
+.owl-carousel .owl-animated-in {
+  z-index: 0; }
+
+.owl-carousel .owl-animated-out {
+  z-index: 1; }
+
+.owl-carousel .fadeOut {
+  animation-name: fadeOut; }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+/*
+ *  Owl Carousel - Auto Height Plugin
+ */
+.owl-height {
+  transition: height 500ms ease-in-out; }
+
+/*
+ *  Owl Carousel - Lazy Load Plugin
+ */
+.owl-carousel .owl-item {
+  /**
+            This is introduced due to a bug in IE11 where lazy loading combined with autoheight plugin causes a wrong
+            calculation of the height of the owl-item that breaks page layouts
+         */ }
+
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 0;
+  transition: opacity 400ms ease; }
+
+.owl-carousel .owl-item .owl-lazy[src^=""], .owl-carousel .owl-item .owl-lazy:not([src]) {
+  min-height: 0; }
+
+.owl-carousel .owl-item img.owl-lazy {
+  transform-style: preserve-3d; }
+
+/*
+ *  Owl Carousel - Video Plugin
+ */
+.owl-carousel .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000; }
+
+.owl-carousel .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url("owl.video.play.png") no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  transition: transform 100ms ease; }
+
+.owl-carousel .owl-video-play-icon:hover {
+  -ms-transform: scale(1.3, 1.3);
+  transform: scale(1.3, 1.3); }
+
+.owl-carousel .owl-video-playing .owl-video-tn,
+.owl-carousel .owl-video-playing .owl-video-play-icon {
+  display: none; }
+
+.owl-carousel .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: opacity 400ms ease; }
+
+.owl-carousel .owl-video-frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%; }
+
+/**** END OF OWL CROUSEL *****/
+/* No Js */
+.owl-carousel-custom-height .crop-thumbnail {
+  width: auto;
+  height: auto;
+  margin-top: 20px;
+}
+.crop-thumbnail p{
+    text-align: justify;
+}
+/*owl caraousel*/
+
+/*newsletter*/
+.newsletter{
+  background: #010538;
+  margin-top: 50px;
+}
+.newsletter h1{
+  color: #fff;
+   margin-top: 25px;
+}
+.newsletter h5{
+  color: #fff;
+      padding-bottom: 15px;
+   }
+   label{
+    margin-top: 30px;
+   }
+.form-group{
+   color: #fff;
+   margin-top: 30px;
+   position: relative;
+}
+.subscribe{
+  position: absolute;
+    right: 0;
+    top: 55px;
+    background-color: #0097b2;
+    padding: 7px;
+    color: white;
+}
+/*newsletter ends*/
+
+/*detail*/
+.detail img{
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+.detail h4{
+  text-align: center;
+}
+.detail p{
+   text-align: center;
+}
+/*details ends*/
+
+/*footer*/
+.footer{
+  background: #0e1237;
+}
+.footer h2{
+    font-family: verdana;
+      margin-top: 20px;
+       color: #fff;
+       font-size: 20px;
+}
+.footer p{
+      font-family: verdana;
+      font-size: 15px;
+      color: #fff;
+}
+/*.logo-text img{
+      display: block;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-bottom: -10px;
+}*/
+.copyright{
+   background: #079cb7 ;
+}
+.copyright h6{
+    text-align: center;
+    font-family: Arial;
+    margin-top: 30px;
+    color: #fff;
+    font-size: 13px;
+
+}
+.copyright p{
+    text-align: right;
+    font-family: Arial;
+    font-size: 13px;
+    color: #fff;
+}
+@media only screen and (max-width:600px){
+  .copyright  p{
+    text-align: center;
+  }
+}
+/*footer ends*/

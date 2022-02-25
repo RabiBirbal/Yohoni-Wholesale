@@ -1,0 +1,283 @@
+   
+/*navbar*/
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+body{font-family: 'Roboto', sans-serif;}
+/*
+1.1 Header Area
+***************************************************/
+/*Bootstrap Reset*/
+.navbar-nav > li > a {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.mainmenu {
+    background-color: transparent;
+    border-color: transparent;
+    margin-bottom: 0;
+    border: 0px !important;
+}
+.navbar-nav > li:last-child > a {
+    padding-right: 0px;
+    margin-right: 0px;
+}
+.dropdown-menu {
+    padding: 0px 0; 
+    margin: 0 0 0; 
+    border: 0px solid transition !important;
+    border: 0px solid rgba(0,0,0,.15);  
+    border-radius: 0px;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+
+}
+/*=-====Main Menu=====*/
+.navbar-nav .open .dropdown-menu > li > a {
+    padding: 16px 15px 16px 25px;
+}
+.header_bottom { background: #b5092e }
+.header_area .header_bottom .mainmenu a , .navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 16px 15px;
+    font-family: 'Roboto', sans-serif;
+}
+.header_area .mainmenu .active a,
+.header_area .mainmenu .active a:focus,
+.header_area .mainmenu .active a:hover,
+.header_area .mainmenu li a:hover,
+.header_area .mainmenu li a:focus ,
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+    color: #000;
+  /*  background: #fff;*/
+    outline: 0;
+}
+/*-----./ Main Menu-----*/
+
+/*.navbar-default .navbar-toggle { border-color: #fff }*/ /*Toggle Button*/
+.navbar-default .navbar-toggle .icon-bar { background-color: #fff } /*Toggle Button*/
+
+/*==========Sub Menu=v==========*/
+/*.mainmenu .collapse ul > li:hover > a{background: #fff;}*/
+.mainmenu .collapse ul ul > li:hover > a, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover{background: ;}
+.mainmenu .collapse ul ul ul > li:hover > a{background: #000;}
+
+.mainmenu .collapse ul ul, .mainmenu .collapse ul ul.dropdown-menu{background:#089cb7}
+.mainmenu .collapse ul ul ul, .mainmenu .collapse ul ul ul.dropdown-menu{background:#fff}
+.mainmenu .collapse ul ul ul ul, .mainmenu .collapse ul ul ul ul.dropdown-menu{background:#fff}
+
+/******************************Drop-down menu work on hover**********************************/
+.mainmenu{background: none;border: 0 solid;margin: 0;padding: 0;min-height:20px}
+@media only screen and (min-width: 767px) {
+.mainmenu .collapse ul li{position:relative;}
+.mainmenu .collapse ul li:hover> ul{display:block}
+.mainmenu .collapse ul ul{position:absolute;top:100%;left:0;min-width:250px;display:none}
+/*******/
+.mainmenu .collapse ul ul li{position:relative}
+.mainmenu .collapse ul ul li:hover> ul{display:block}
+.mainmenu .collapse ul ul ul{position:absolute;top:0;left:100%;min-width:250px;display:none}
+/*******/
+.mainmenu .collapse ul ul ul li{position:relative}
+.mainmenu .collapse ul ul ul li:hover ul{display:block}
+.mainmenu .collapse ul ul ul ul{position:absolute;top:0;left:-100%;min-width:250px;display:none;z-index:1}
+
+}
+
+/*navbar ends*/
+
+.how-it-work {
+	margin-bottom: 60px;
+	position: relative;
+}
+.main-how-it {
+	position: absolute;
+	top: 217px;
+	left: -355px;
+	background: #f6f6f6;
+	width: 580px;
+	height: 110px;
+	transform: rotate(-90deg);
+	border-radius: 50px;
+	box-shadow: 0px 2px 11px -2px rgba(0,0,0,0.4);
+	margin-top: 30px;
+}
+.main-how-it h4 {
+	font-size: 54px;
+	padding-top: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	color:#2DABC1;
+	font-weight: 800;
+}
+.bg-theme {
+	color: #020538;
+}
+.how-it-work .panel {
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+    color: #fff;
+    font-size: 16px;
+    background: #2DABC1;
+    margin-left: 4px;
+    box-shadow: 0px 1px 7px 1px rgb(0 0 0 / 40%);
+   /* margin-bottom: 15px;*/
+   margin-top: 25px;
+}
+.how-it-work .panel span,
+.how-it-work .panel:hover span  {
+	-webkit-transition: all ease-out 0.3s;
+	-moz-transition: all ease-out 0.3s;
+	-o-transition: all ease-out 0.3s;
+	transition: all ease-out 0.3s;
+}
+.how-it-work .panel:hover span {
+	/*background: rgba(0,0,0,0.4);*/
+	background: #000;
+}
+.how-it-work .panel:nth-child(even) {
+	background: #78c043;
+}
+.how-it-work .panel-body {
+	overflow-y: auto;
+	overflow: visible;
+	height: 120px;
+	padding-left: 120px;
+	position: relative;
+}
+.how-it-work .panel-body span {
+	position: absolute;
+	top: 15px;
+	left: 0px;
+	width: 90px;
+	height: 90px;
+	line-height: 90px;
+	color: #2DABC1;
+	background: #f6f6f6;
+	text-align: center;	
+	font-size: 36px;
+	font-weight: 800;
+	border-radius: 50%;
+	box-shadow: 0px 2px 10px rgba(0,0,0,0.4);
+}
+.how-it-work .panel-body span:before {
+	content: "";
+	position: absolute;
+	top: 35px;
+	left: -49px;
+	width: 50px;
+	height: 20px;
+	background: #f6f6f6;
+	box-shadow: 0px 8px 3px -5px rgba(0,0,0,0.2);
+}
+.how-it-work .panel:nth-child(even) {
+    background: #020538;
+    margin-left: 4px;
+}
+.how-it-work .step-heading {
+	
+    font-size: 28px;
+    margin-top: 0px;
+    color: #fff;
+    padding-top: 15px;
+}
+
+
+
+
+/*newsletter*/
+.newsletter{
+  background: #010538;
+  margin-top: 50px;
+}
+.newsletter h1{
+  color: #fff;
+   margin-top: 25px;
+}
+.newsletter h5{
+  color: #fff;
+      padding-bottom: 15px;
+   }
+   label{
+    margin-top: 30px;
+   }
+.form-group{
+   color: #fff;
+   margin-top: 30px;
+   position: relative;
+}
+.subscribe{
+  position: absolute;
+    right: 0;
+    top: 55px;
+    background-color: #0097b2;
+    padding: 7px;
+    color: white;
+}
+/*newsletter ends*/
+
+/*detail*/
+.detail img{
+  margin-top: 50px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.detail h4{
+  text-align: center;
+}
+.detail p{
+   text-align: center;
+}
+/*details ends*/
+
+
+/*footer*/
+.footer{
+  background: #0e1237;
+}
+.footer h2{
+    font-family: verdana;
+      margin-top: 20px;
+       color: #fff;
+       font-size: 20px;
+}
+.footer p{
+      font-family: verdana;
+      font-size: 15px;
+      color: #fff;
+}
+/*.logo-text img{
+      display: block;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-bottom: -10px;
+}*/
+.copyright{
+   background: #079cb7 ;
+}
+.copyright h6{
+    text-align: center;
+    font-family: Arial;
+    margin-top: 30px;
+    color: #fff;
+    font-size: 13px;
+
+}
+.copyright p{
+    text-align: right;
+    font-family: Arial;
+    font-size: 13px;
+    color: #fff;
+}
+@media only screen and (max-width:600px){
+  .copyright  p{
+    text-align: center;
+  }
+}
+/*footer ends*/

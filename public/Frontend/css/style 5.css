@@ -1,0 +1,379 @@
+ /*navbar*/
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+body{font-family: 'Roboto', sans-serif;}
+/*
+1.1 Header Area
+***************************************************/
+/*Bootstrap Reset*/
+.navbar-nav > li > a {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.mainmenu {
+    background-color: transparent;
+    border-color: transparent;
+    margin-bottom: 0;
+    border: 0px !important;
+}
+.navbar-nav > li:last-child > a {
+    padding-right: 0px;
+    margin-right: 0px;
+}
+.dropdown-menu {
+    padding: 0px 0; 
+    margin: 0 0 0; 
+    border: 0px solid transition !important;
+    border: 0px solid rgba(0,0,0,.15);  
+    border-radius: 0px;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+
+}
+/*=-====Main Menu=====*/
+.navbar-nav .open .dropdown-menu > li > a {
+    padding: 16px 15px 16px 25px;
+}
+.header_bottom { background: #b5092e }
+.header_area .header_bottom .mainmenu a , .navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 16px 15px;
+    font-family: 'Roboto', sans-serif;
+}
+.header_area .mainmenu .active a,
+.header_area .mainmenu .active a:focus,
+.header_area .mainmenu .active a:hover,
+.header_area .mainmenu li a:hover,
+.header_area .mainmenu li a:focus ,
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+    color: #000;
+  /*  background: #fff;*/
+    outline: 0;
+}
+/*-----./ Main Menu-----*/
+
+/*.navbar-default .navbar-toggle { border-color: #fff }*/ /*Toggle Button*/
+.navbar-default .navbar-toggle .icon-bar { background-color: #fff } /*Toggle Button*/
+
+/*==========Sub Menu=v==========*/
+/*.mainmenu .collapse ul > li:hover > a{background: #fff;}*/
+.mainmenu .collapse ul ul > li:hover > a, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover{background: ;}
+.mainmenu .collapse ul ul ul > li:hover > a{background: #000;}
+
+.mainmenu .collapse ul ul, .mainmenu .collapse ul ul.dropdown-menu{background:#089cb7}
+.mainmenu .collapse ul ul ul, .mainmenu .collapse ul ul ul.dropdown-menu{background:#fff}
+.mainmenu .collapse ul ul ul ul, .mainmenu .collapse ul ul ul ul.dropdown-menu{background:#fff}
+
+/******************************Drop-down menu work on hover**********************************/
+.mainmenu{background: none;border: 0 solid;margin: 0;padding: 0;min-height:20px}
+@media only screen and (min-width: 767px) {
+.mainmenu .collapse ul li{position:relative;}
+.mainmenu .collapse ul li:hover> ul{display:block}
+.mainmenu .collapse ul ul{position:absolute;top:100%;left:0;min-width:250px;display:none}
+/*******/
+.mainmenu .collapse ul ul li{position:relative}
+.mainmenu .collapse ul ul li:hover> ul{display:block}
+.mainmenu .collapse ul ul ul{position:absolute;top:0;left:100%;min-width:250px;display:none}
+/*******/
+.mainmenu .collapse ul ul ul li{position:relative}
+.mainmenu .collapse ul ul ul li:hover ul{display:block}
+.mainmenu .collapse ul ul ul ul{position:absolute;top:0;left:-100%;min-width:250px;display:none;z-index:1}
+
+}
+
+/*navbar ends*/
+
+/* Toggle Styles */
+ 
+ #wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+ 
+#wrapper.toggled {
+    padding-left: 250px;
+    overflow: scroll;
+}
+ 
+#sidebar-wrapper {
+    z-index: 1000;
+    position: absolute; 
+    left: 250px;
+    width: 0;
+    height: 50%;
+    margin-left: -250px;
+    overflow-y: auto;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+
+}
+ 
+#page-content-wrapper {
+    position: absolute;
+    padding: 15px;
+    width: 100%;  
+    overflow-x: hidden; 
+
+}
+.xyz{
+    min-width: 360px;
+}
+#wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0px; 
+}
+.fixed-brand{
+    width: auto;
+}
+/* Sidebar Styles */
+ 
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 2px;
+}
+ 
+.sidebar-nav li {
+    text-indent: 15px;
+    line-height: 40px;
+    margin-top: 135px;
+}
+ 
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+    
+
+}
+ 
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #000;
+    background: rgba(255,255,255,0.2);
+    border-left: red 2px solid;
+}
+ 
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+ 
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 20px;
+    line-height: 60px;
+}
+ 
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+ 
+.sidebar-nav > .sidebar-brand a:hover {
+    /*color: #fff;*/
+    background: none;
+}
+.no-margin{
+    margin:0;
+}
+ 
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+    .fixed-brand{
+        width: 250px;
+    }
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+ 
+    #sidebar-wrapper {
+        width: 250px;
+    }
+ 
+    #wrapper.toggled #sidebar-wrapper {
+        width: 250px;
+    }
+    #wrapper.toggled-2 #sidebar-wrapper {
+        width: 50px;
+    }
+    #wrapper.toggled-2 #sidebar-wrapper:hover {
+        width: 250px;
+    }
+ 
+ 
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+ 
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+        padding-left: 250px;
+    }
+    #wrapper.toggled-2 #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+        margin-left: -200px;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        width: auto;
+ 
+    }
+}
+
+.footwear-feature p{
+    text-align: center;
+  font-size: 17px;
+}
+.footwear-feature img{
+  margin-top: 50px;
+}
+.footwear-feature h5{
+ text-align: center;
+  font-size: 17px;
+}
+@media only screen and (max-width:600px){
+  .footwear-feature h5{
+  text-align: center;
+  font-size: 17px;
+ }
+   .footwear-feature img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+}
+.items{
+    position: relative;
+}
+.items span{
+    position: absolute;
+    top: 20px;
+    background-color: red;
+    padding: 5px;
+    color: white;
+}
+
+
+
+/*newsletter*/
+.newsletter{
+  background: #010538;
+  margin-top: 50px;
+}
+.newsletter h1{
+  color: #fff;
+   margin-top: 25px;
+}
+.newsletter h5{
+  color: #fff;
+      padding-bottom: 15px;
+   }
+   label{
+    margin-top: 30px;
+   }
+.form-group{
+   color: #fff;
+   margin-top: 30px;
+   position: relative;
+}
+.subscribe{
+  position: absolute;
+    right: 0;
+    top: 55px;
+    background-color: #0097b2;
+    padding: 7px;
+    color: white;
+}
+/*newsletter ends*/
+
+/*detail*/
+.detail img{
+  margin-top: 50px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.detail h4{
+  text-align: center;
+}
+.detail p{
+   text-align: center;
+}
+/*details ends*/
+
+
+/*footer*/
+.footer{
+  background: #0e1237;
+  margin-top: 30px;
+}
+.footer h2{
+    font-family: verdana;
+      margin-top: 20px;
+       color: #fff;
+       font-size: 20px;
+}
+.footer p{
+      font-family: verdana;
+      font-size: 15px;
+      color: #fff;
+}
+/*.logo-text img{
+      display: block;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-bottom: -10px;
+}*/
+.copyright{
+   background: #079cb7 ;
+}
+.copyright h6{
+    text-align: center;
+    font-family: Arial;
+    margin-top: 30px;
+    color: #fff;
+    font-size: 13px;
+
+}
+.copyright p{
+    text-align: right;
+    font-family: Arial;
+    font-size: 13px;
+    color: #fff;
+}
+@media only screen and (max-width:600px){
+  .copyright  p{
+    text-align: center;
+  }
+}
+/*footer ends*/
