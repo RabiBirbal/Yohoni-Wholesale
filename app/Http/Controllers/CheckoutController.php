@@ -22,7 +22,12 @@ class CheckoutController extends Controller
     {
 
         $totalBill=$req->total_bill;
-        $user_id=session()->get('user')['id'];
+        if(Session::has('user')){
+            $user_id=session()->get('user')['id'];
+            }
+            else{
+                $user_id="";
+            }
         $cart= Cart::where('user_id',$user_id)->count();
         $cartItem=Cart::where('user_id',$user_id)->get();
         $category=Category::all();

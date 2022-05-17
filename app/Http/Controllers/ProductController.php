@@ -27,7 +27,12 @@ class ProductController extends Controller
         $products=Product::where('subcategory',$test)->orderBy('id','desc')->get();
         $subcategory1=Subcategory::where('name',$test)->first();
         $subcategory=Subcategory::where('category_id',$subcategory1->category_id)->get();
-        $user_id=session()->get('user')['id'];
+        if(Session::has('user')){
+            $user_id=session()->get('user')['id'];
+            }
+            else{
+                $user_id="";
+            }
         $cart= Cart::where('user_id',$user_id)->count();
         $category=Category::all();
         $user=User::find($user_id);
@@ -124,7 +129,12 @@ class ProductController extends Controller
     {
         $product=Product::find($id);
         $size=explode(",",$product->available_size);
-        $user_id=session()->get('user')['id'];
+        if(Session::has('user')){
+            $user_id=session()->get('user')['id'];
+            }
+            else{
+                $user_id="";
+            }
         $category=Category::all();
         $cart= Cart::where('user_id',$user_id)->count();
         $user=User::find($user_id);
@@ -249,7 +259,12 @@ class ProductController extends Controller
         $subcategory=Subcategory::where('category_id',$category1->id)->get();;
         $category=Category::all();
 
-        $user_id=session()->get('user')['id'];
+        if(Session::has('user')){
+            $user_id=session()->get('user')['id'];
+            }
+            else{
+                $user_id="";
+            }
         $cart= Cart::where('user_id',$user_id)->count();
         $user=User::find($user_id);
 

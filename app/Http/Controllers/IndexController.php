@@ -9,6 +9,7 @@ use App\Models\Cart;
 use App\Models\Category;
 use App\Models\Subcategory;
 use App\Models\User;
+use Illuminate\Support\Facades\Session;
 
 class IndexController extends Controller
 {
@@ -21,10 +22,18 @@ class IndexController extends Controller
         $electric=Product::where('category','Electric')->orderBy('id','desc')->get()->take(4);
         $mobile=Product::where('category','Mobile')->orderBy('id','desc')->get()->take(4);
         $footwear=Product::where('category','Footwear')->orderBy('id','desc')->get()->take(4);
+        if(Session::has('user')){
         $user_id=session()->get('user')['id'];
         $cart= Cart::where('user_id',$user_id)->count();
         $category=Category::all();
         $user=User::find($user_id);
+        }
+        else{
+            $user_id="";
+            $cart= Cart::where('user_id',$user_id)->count();
+            $category=Category::all();
+            $user=User::find($user_id);
+        }
 
         return view('frontend/home',compact("banner","banner1","home_appliances","electric","mobile","footwear","clothing","cart","category","user"));
 

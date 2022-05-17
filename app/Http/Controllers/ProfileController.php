@@ -19,7 +19,12 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        $user_id=session()->get('user')['id'];
+        if(Session::has('user')){
+            $user_id=session()->get('user')['id'];
+            }
+            else{
+                $user_id="";
+            }
         $cart= Cart::where('user_id',$user_id)->count();
         $category=Category::all();
         $user=User::find($user_id);
@@ -84,7 +89,12 @@ class ProfileController extends Controller
      */
     public function update(Request $request)
     {
-        $user_id=session()->get('user')['id'];
+        if(Session::has('user')){
+            $user_id=session()->get('user')['id'];
+            }
+            else{
+                $user_id="";
+            }
         $user=User::find($user_id);
         $user->name=$request->name;
         $user->email=$request->email;

@@ -22,7 +22,12 @@ class OrderController extends Controller
      */
     public function index(request $req)
     {
-        $user_id=session()->get('user')['id'];
+        if(Session::has('user')){
+            $user_id=session()->get('user')['id'];
+            }
+            else{
+                $user_id="";
+            }
         $order=Order::where('user_id',$user_id)->orderBy('id','desc')->get();
         $cart= Cart::where('user_id',$user_id)->count();
         $category=Category::all();
@@ -151,7 +156,12 @@ class OrderController extends Controller
         // ->select('products.*')
         ->get();
         // $orderProduct=Order_product::where('order_id','$order->id')->get();
-        $user_id=session()->get('user')['id'];
+        if(Session::has('user')){
+            $user_id=session()->get('user')['id'];
+            }
+            else{
+                $user_id="";
+            }
         $cart= Cart::where('user_id',$user_id)->count();
         $category=Category::all();
         return view('frontend/order-details',compact("order","user","orderProduct","cart","category"));

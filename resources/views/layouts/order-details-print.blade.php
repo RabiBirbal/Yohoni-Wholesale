@@ -3,7 +3,7 @@
 <head>
 	<title>Order Details</title>
 	<!-- bootstrap -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 	<div class="containe-fluid" style="margin-left: 5%; margin-right: 5%">

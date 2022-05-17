@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Cart;
 use App\Models\User;
 use App\Models\Category;
+use Illuminate\Support\Facades\Session;
 
 class AboutController extends Controller
 {
@@ -16,7 +17,12 @@ class AboutController extends Controller
      */
     public function index()
     {
-        $user_id=session()->get('user')['id'];
+        if(Session::has('user')){
+            $user_id=session()->get('user')['id'];
+            }
+            else{
+                $user_id="";
+            }
         $cart= Cart::where('user_id',$user_id)->count();
         $category=Category::all();
         $user=User::find($user_id);
